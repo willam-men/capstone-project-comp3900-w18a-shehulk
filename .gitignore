@@ -1,0 +1,14 @@
+.venv
+__pycache__
+.vscode 
+
+.env
+
+csv
+
+postgres-data
+sqltools_*
+.bashrc
+pg_hba.conf
+
+output.txt

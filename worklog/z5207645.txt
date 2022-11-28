@@ -1,0 +1,41 @@
+Rahul Ahluwalia
+
+Week 1:
+- broke up into backend and frontend teams and decided on overall softwares/tech stack we are going to use
+
+Week 2:
+- decided on data structures in the backend
+- assisted on setting up backend with a postgres database, flask server and dockerising the process
+
+Week 3:
+- made a common interface of api calls between frontend and backend
+- worked on the report (software architecture for backend)
+- went over user stories for the report
+
+Week 4:
+- worked on recipes endpoint 
+- fixed tokens so that they can be checked for validation and converted to userid
+
+Week 5:
+- helped debug other backend functions 
+- prepared for demo 
+
+Week 6:
+- worked on the like, unlike, subscribe, unsubscribe, search endpoints
+
+Week 7:
+- converted test data to api calls and made the test data more complex by adding likes and subscribes between users and recipes to make the site seem more lively
+
+Week 8:
+- helped debug backend functions
+- discussed how to make the site load faster, mainly the various recipe pages (only send id first)
+- prepared for demo
+
+Week 9:
+- finished recommendation system and wrote corresponding explanations in report
+- designed a similarity metric for recommendation system
+
+Week 10:
+- added https unit tests with extensive comments and made them repeatable
+- debugged recipe delete bugs
+- prepared for presentation

@@ -1,0 +1,83 @@
+Worklog
+
+===== Week 1 =====
+Formed groups during the Week 1 tutorial  and discussed potential projects during the tutorial.
+During meeting on Sunday decided to do Recipe project and spent time as a group discussing potential features, user stories and their acceptance criteria.
+
+===== Week 2 =====
+Met with Willam to discuss how we were going to implement frontend features and created a wire frame of each of the basic pages we intended to create.
+Divided the front end tasks such that I would complete the Login, Registration, Logout and Recipe Detail page during Sprint 1.
+Presented our wireframes to the rest of the group and outlined what information we needed for each request.
+I added subtickets for each of the user stories on Jira to specify what needed to be complete for the front end.
+I joined the team repo on github.
+
+===== Week 3 =====
+I began conducting the background research and writing the background/introduction part of the report and asked others for feedback.
+I added the user stories from the previous meeting to the report and wrote additional detail for each to ensure they were very specific.
+As a team we discussed potential novel functionalities and I documented these in the report draft.
+I started creating the front end base app by creating files for all the main pages and doing the front end routing.
+I created the navigation and auth navigation bar for the front end and pushed it to the shared repo.
+*Was away Thurs-Sun due to being in Brisbane for a funeral.
+
+===== Week 4 =====
+I looked over the report and gave feedback for the other sections and approved it before we submitted as a team.
+I started and completed the Login, Register and Logout forms/functionality on the front end side to be ready to connect to the backend next week.
+In these features I ensured that all front end error checking was carried out correctly as specified in our requirements/acceptance criteria.
+*Was away Fri-Tues due to being in Brisbane for a funeral again.
+
+===== Week 5 =====
+I met with the backend team to connect the front and backend to see if it could accept requests and debugged problems we ran into.
+Set up my docker and backend with the help of the backend team.
+Started and completed the recipe details page and connected it to backend.
+Successfully connected my front end features with the backend in time for the demo.
+Helped debug the explore front end page in time for the demo.
+Demoed the project alongside group mates (online since I was sick).
+*Was sick with cold and flu symptoms from Wed-Fri.
+
+===== Week 6 =====
+Focussed on creating the user profile page to include profile picture, name, title, bio, email etc.
+Used conditional rendering to give access to different features depending on the user type on profile page.
+e.g. if the user was looking at their own profile they have buttons to edit details.
+e.g. if the user was logged in they have a button to subscribe
+Populated the login welcome page and navigation bar to include information from the user after backend endpoint was complete.
+Created input dialog pop ups for the user to change their profile picture and personal details.
+
+===== Week 7 =====
+Created the recipe cards to be used in the Explore, Personal Feed, Search Results and Profile pages after a group member failed to complete this since week 5 and we needed it for week 8 demo.
+Integrated the recipe cards on all 4 pages and applied conditional rendering to show appropriate action buttons depending on the user/loggedin status.
+Created an explore users page to keep track of emails, users on the system each displaying subscribe functionality + user info.
+Created the search and advanced search page allowing users to search for recipes based on multiple fields (frontend only).
+Discussed with backend what their preferred method of receiving search terms was and decided to put it in the url together.
+Connected user change profile picture and personal details frontend with the backend endpoint. 
+
+===== Week 8 =====
+Worked with backend to integrate search and notified them of what the url would look like so they could extract information from it.
+Completed the demo during week 8 lab.
+Conducted retrospective in the team and was delegated the task of ensuring the app was more accessible and usable.
+Added UI features to make the app easier and more intuitive to use.
+UI/Accessibility features included: 
+- adding breadcrumbs at the top of the page for navigation
+- adding animations and cursor changes to items that are clickable on recipe and user cards
+- adding tooltips on buttons to further explain what each button means
+- adding buttons to scroll to top or sections of the page with smooth scroll transitions
+- adding less intrusive success alerts and error alerts when the user sucessfully posts recipe, changes detail, fails to login etc.
+- changing the user's profile to include all links to detail changes including password changes
+- adding change profile icon to user's profile in a well known spot
+- making the see password button on password and confirm pass on register page independent 
+
+===== Week 9 =====
+Created meal plan page and implemented buttons on explore pages to allow users to add recipes to their meal plan.
+Created the pantry and shopping list dialog on the meal plan page with remove/add buttons so it would dynamically change with user input.
+Communicated with backend to outline what endpoints were still missing/needed and used stubs while waiting. 
+During the meeting I demo-ed all the new changes to the rest of the group to get feedback.
+Created a separate page for the shopping list and pantry for better access and user experience.
+Added movie screenshots and a find remy game to the home page.
+Began discussing the report + presentation and dividing up sections to complete.
+*Was sick with a viral infection with symtoms on Tues-Fri.
+
+===== Week 10 =====
+Created frontend component for comments and ratings to allow users to add, edit and delete comments/ratings.
+Cleaned up the front end code base to make the code more readable and to remove debugging statements.
+Completed the functionalities section of the final report with descriptions and screenshots of the application.
+Discussed the presentations, helped create the slides during the meeting and delegated slides/demo items to each team member.
+To present the background, novel features, accessibility considerations and bonus features of the app on wednesday.

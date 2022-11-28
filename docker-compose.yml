@@ -1,0 +1,47 @@
+version: '2.2'
+
+services:
+  web:
+    build: ./backend
+    command: python manage.py run -h 0.0.0.0
+    volumes:
+      - ./backend/:/usr/src/app/
+    ports:
+      - 5001:5000
+    env_file:
+      - ./.env
+    environment:
+      FLASK_DEBUG: 1
+  db:
+    image: postgres
+    container_name: pg-development-server
+    restart: always
+    ports:
+      - "54320:5432"
+    environment:
+      POSTGRES_USER: ${PG_USER} 
+      POSTGRES_PASSWORD: ${PG_USER_PASSWORD} 
+    volumes:
+      - pgdb-volume:/var/lib/postgresql/data
+      # copy the sql script to create tables
+      - ./sql/create_tables.sql:/docker-entrypoint-initdb.d/create_tables.sql
+      # copy the sql script to fill tables
+      - ./sql/fill_tables.sql:/docker-entrypoint-initdb.d/fill_tables.sql
+      - ./sql/fill_ingredients.sql:/docker-entrypoint-initdb.d/fill_ingredients.sql
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin4-development-server
+    restart: always
+    ports:
+      - "5050:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PG_ADMIN_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PG_ADMIN_PASSWORD}
+    volumes:
+      - pgadmin-volume:/var/lib/pgadmin
+      
+volumes:
+  pgdb-volume:
+  pgadmin-volume:
+

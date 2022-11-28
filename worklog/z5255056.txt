@@ -1,0 +1,85 @@
+Week 1
+- Group formed. I created the Jira board as scrum master and submitted our group
+name in webCMS.
+- We discussed as a group which project to pursue, and the required features 
+that we needed to implement to make an MVP of the project.
+- After deciding on the Meal Recommendation System project, we brainstormed user 
+stories needed for a Recipe website
+- We also discussed the required project functionalities and the acceptance criteria
+
+Week 2
+- Front-end meeting to discuss what technologies to use (React, MaterialUI)
+- Created a basic story board of how each front end page will look like, and 
+what specific pages our website needed.
+- Had a group meeting - with the backend team to figure out what data we needed
+for each specific page
+- Organised and delegated tickets on the Jira board with the group, specifically
+what the front-end team was going to do
+- I was tasked with creating the Explore Recipes page and the pagination functionality
+
+Week 3
+- Started working on frontend creating the explore page to display as many recipe cards
+as we needed.
+- Working on pagination for the explore page to make sure the explore page displays 
+only 9 recipe cards on one page
+- Started looking through the report and spoke about the front-end implementation
+and the architectures that the front-end team used to build the website interface
+
+Week 4
+- Finished up the explore page, initially using mock data to display an array of recipe
+cards. We intended to connect the frontend with the backend so that the explore page 
+could be used with the data in our database
+- Read over the report and worked as a group to find little details in the report
+that could be improved before reaching group concensus and submitting as the Scrum Master
+
+Week 5 
+- I set up my own backend with Docker Desktop, however I ran into multiple issues with 
+storage on my laptop, so Docker Desktop was running extremely slowly or crashing at times
+- Cleaned up bugs with the Explore page and continued to work on pagination for the explore
+page. My implementation of pagination was working with my local mock data in a .json file,
+but many errors were occuring when trying to use pagination with the Docker data.
+- Demoed the project for the first time at Project Demo A. We were able to demo the explore
+page without pagination but with the docker data and I demoed my local explore page that 
+had pagination working.
+
+Week 6
+- Continued working on pagination
+- I significantly slowed down on my work, due to some highly distressing external and
+family matters. A loved one had passed away and I was extremely overwhelmed handling the
+logistics and paperwork.
+- I intended on also creating and modifying the individual recipe cards that would be displayed
+on all of our websites pages. I had implemented liking and hovering (to reveal more recipe details)
+but was unable to finish due to external circumstances.
+
+Week 7
+- I continued trying to work on pagination, and finally had gotten it working for my explore 
+page. however I had forgotten to let my team know this as I was significantly overwhelmed and 
+distressed with external factors
+- I continued to attempt to integrate pagination into the rest of the web pages
+
+Week 8
+- The team began working on multiple front-end bugs and I assisted with this.
+- The team also acknowledged my severe lack of input into the project thus far, and I communicated
+to them my external circumstances and acknowledged the lack of work that I had put in thus far
+- It was agreed upon that I would be attempting my best to contribute to the remainder of the project
+with whatever front-end functionalities needed to be completed, as well as the report and project
+presentation
+- Started working on small front-end bugs like breadcrumb navigation, front-end to back-end requests,etc
+
+Week 9
+- I began implementing updating a user's password and created a form in the Personal Settings page that 
+pops up with a button.
+- I also fixed the breadcrumming from All Users -> Personal Settings
+- I added my own breadcrumbs that takes the user back to their own profile after changing their password
+- Began working on the Final Project Report, talking about the project funtionalities that were implemented
+as well as the system architecture, specifically the front-end frameworks and technologies that we used.
+- I had also run into a lot of trouble integrating pagination for every other page such as All Users and 
+Personal Feed. The usePagination hook that I had implemented was not displaying the correct recipe cards
+at times, and sometimes not displaying anything at all.
+- It had become too difficult and time consuming trying to implement pagination as I had in explore, so I
+decided to not implement pagination for these pages, and thus remove pagination from the explore page so that 
+it looks more neater and concise. The team also agreed on this.
+
+Week 10
+- Working on the Final Project Presentation and Report
+- Wrote back-end tests to test users, recipe creation and deletion, and more.

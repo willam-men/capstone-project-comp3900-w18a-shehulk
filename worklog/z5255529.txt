@@ -1,0 +1,82 @@
+Week 1
+Group formed. We discussed the tech stack (SQL- DB, Python- BE, React FE)we would use and any tools we would use to keep our code uniform (Prettier, linting, Github pipelines) Together with the rest of my team, we went through the compulsory features that we needed to implement and wrote user stories to represent these. Also, wrote acceptance criteria which each user story would need to achieve to be able to move the JIRA to done. Joined the JIRA board for our group. We also wrote a list of additional features we could implement (and user stories/acceptance criteria for each of these) but didn't decide which ones we would implement. I had a look at AllRecipes and Kitchen Stories to do some competition market analysis and we discussed some improvements for both these sites that we could incorporate into our version. 
+
+For next meeting:
+- decide importance of user stories
+- move user stores into jira board
+- sort jiras into 3 sprints
+
+Week 2
+Joined the Github repo for our group. Met with the BE members in our group and discussed whether we would need to deploy our app/db somewhere. We concluded that this is something we would need to ask our tutor. For the meantime, we would aim to deploy our Postgresdb onto Heroku but we would re-evaluate this decision later. In this meeeting, we also drafted up the structure of the db, and discussed what BE tools we would use. We also thought through how we would implement getting the nutritional value of recipes. We decided we would use a nutritional API where you input the names of ingredients to find the nutritional value. We also decided we would use Flask as the python API. We also briefly discussed that to connect the FE/BE together, we would run them both locally to test and connect to the deployed database. 
+
+For next meeting:
+- update each other on BE/FE progress and assign tasks for the first sprint 
+- discuss API routes and decide on contract being passed between FE and BE
+
+In our whole team meeting, we what we did in our separate BE/FE meeting. Then, we discussed the API routes and the contract between the FE and BE. I then moved all the user stories we had written up previously into Jira. 
+
+Week 3
+At the beginning of the week, I worked on the software architecture diagram to represent what technologies we were using and started writing some descriptions of the interface, business, API and database layer. I also started work on the external actor use diagram. As we had not decided which novel functionalities we were going with, this would require updating later on. I also updated the user stories with more detailed acceptance criteria based on what Lisa had written in the report. I also broke down some of the user tasks into smaller tasks that would need to be done in the BE to be able to achieve the objective of the user story. I also created a diagram to represent the database. 
+
+I had a meeting with a few members of my team, and we discussed which user stories should be in Sprint 1, and decided on 10 issues, that were essential for the platform functionality. We also discussed a few minor changes to the proposal based on notes that I took from Lecture 1. As not everyone could make it to this meeting, we decided that we would decide the name of the website, and assign tasks in our next meeting (Wed) during our lab. We also concluded that we needed further clarification about the below issues that we would ask in our next lab:
+- What are considered 'novel' functionalities? 
+- Did we need to deploy our app/database?
+
+I then began looking into setting up our Postgres db locally, but was unable to connect via the peewee interface. Hence, we decided to use docker to connect. I setup the connection with docker and tested that it would still work with the Flask API running, since we were using localhost to run the docker Postgres db. I then set all the parameters as environment variables that would NOT be pushed into the git repo for security reasons. I similarly setup a .gitignore file to do this and set this to ignore all files that may contain sensitive information. I finally updated the instructions of how to run the BE and setup the db in the README. 
+
+Week 4
+This week, I realised there was a way to initialise tables upon creating the dockerised database, and hence decided to write sql scripts that would allow this to happen. I wrote sql scripts to initalise the necessary tables, and add test data (a user, and a few recipes). I needed to confirm a few details with the FE to make sure I was entering valid data, so noted this down to discuss next meeting. 
+
+I also dockerised the flask api, which makes it much more simple to set up the BE. I also mocked up an endpoint for GET /recipes to be exchanged between the FE and BE.
+
+In our team meeting we discussed:
+- the confirmed json endpoints 
+- to finish the BE and FE components by Sun and then we could put it together on Sun 
+
+I started on one of the endpoints for Sprint 2 since I had finished my sprint 1 work (the POST endpoint for /recipe/create). While doing this, I mocked up a JSON that the FE would pass to us for this endpoint. I also worked with Rahul to add more recipe test data into the db. He worked on writing a function that takes a url and converts it into a dictionary of all the recipe components. I then worked to re-format this dictionary into the string format that we needed to insert into SQL, and added 20 new recipes into our fill_tables sql script.
+
+In our team meeting on Sunday, since not everyone was finished yet, we decided to connect the BE and FE on Tuesday night. 
+
+Week 5
+I tidied up the functions to make this test data, and the POST endpoint I had written and made a PR for this. I also confirmed some style issues with the BE team that we would primarily use snakecase other than when defining schemas to pass to the FE, since they required it in camelcase.
+
+On Tuesday, we connected the FE and BE together for the /login and /register endpoints, but as the explore FE page was not completed, we 
+
+On Wednesday, we completed our team retro and also outlined our plans for the next sprint. We decided we would aim to complete all tasks other than the novel features and recommendations. Based on our retro, we decided that we needed more people working on the FE so Rochan and I suggested that we would do some FE work this time.
+
+On Sunday, I had a meeting with Rochan and Rahul to discuss what tasks we would be doing in the BE. We decided that I would do the create/edit recipe endpoints for the BE and the related screens in the FE. 
+
+Week 6
+I continued work on the /recipe/create endpoint so that it updated the user with their published recipe, and then started work on the create a new recipe form in the FE. I also updated our Jira board to assign the relevant tickets to each person, and added new defect Jiras based on our discussion in the Retro. 
+
+In the meantime, I finished the new recipe form in the FE. This included adding validation for correctness of fields, and also to check if the compulsory fields were filled in. If not, the appropriate error messages were displayed. I messaged my team for their feedback on this.
+
+We also had a quick standup on Friday where we decided that we would aim to connect the BE/FE on Saturday 22nd, so we set a deadline to finish our individual sections by then. This would leave us more time to connect the BE and FE together than the last sprint, and also to conduct appropriate testing. 
+
+Week 7
+This week I created an ingredients table, and loaded the ingredients into there. I also made a GET endpoint to retrieve these ingredients which I then used to add validation into the create/edit recipe form and search functionality. I also helped in testing whether the test data was working. Other than this, I worked on small enhancements that would improve our website. (e.g. a Not Found screen which would re-route invalid users if they didn't have access to a screen, among other changes).
+
+Week 8
+I spent the beginning of this week fixing a variety of minor bugs and added docstrings for all functions in the BE. Something I noticed when fixing a bug was our explore page took a while to load. We discussed this issue as a team and decided the images were the primary issue so we would find a better way to store them. We would complete this as an enhancement during our next sprint. 
+
+On Wednesday, our team presented our demo and completed the retro. To plan for next sprint, I wrote up BE jiras to capture the BE tasks that would need to completed for each user story. For the final sprint, we planned to complete all remaining functionalities:
+- comments
+- meal plan/pantry
+- recommendations 
+- deploy into VM and test in there
+- enhance performance and usability
+
+For the next sprint, I was primarly working on pantry/meal type BE functionalities and fixing any FE/BE bugs, and adding more documentations, and cleaning up code. I spent the latter half of the week writing the BE endpoints assigned to me. This led me to realise that if I added the recipes using each ingredient in the ingredientsorm, it would make our existing endpoints faster. Hence, I worked on refactoring the existing code to leverage this ability. 
+
+Upon finishing the BE endpoints, I wrote up the relevant information in the user story so Lisa who was writing the FE would know what to put in the body/fields within JSON. 
+
+Week 9
+This week I helped debug some issues when connecting the FE/BE pantry/meal plan endpoints together. I also refactored code to improve the performance of all screens involving the recipe cards. I also wrote a few new minor endpoints that we identified that we were missing for pantry/meal plan functionalities. 
+
+I also added ingredient validation for the advanced search feature, and meal plan. Our group decided that by Sunday we would aim to get all functionalities complete so we could focus on bug fixes, and the presentation/report in W10. 
+
+Week 10
+I spent this week fixing up some minor BE bugs: displaying of pfp for users, avg ratings for recipes and makeable recipes. 
+I also cleaned up the code for the BE and FE by adding docstrings in the BE and removing print statements. In the FE I removed console logs and ran prettier.
+
+On Monday night, our group planned out our presentation by making the slides and assigning sections for each person. We planned for some time on Tuesday night to run through the presentation and make sure our presentation would be on time. 

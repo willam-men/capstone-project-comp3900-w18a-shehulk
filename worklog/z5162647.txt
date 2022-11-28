@@ -1,0 +1,46 @@
+# Worklog
+
+## Week 1: 
+
+Formed our groups this week we did. To use SQL, Flask, React and Docker, we discussed and thought upon.
+Docker usage and potential setup I looked into. 👀 
+
+## Week 2: 
+
+These were challenging times, the world was falling apart and here I was trying to setup github.
+Aside from this I looked into Heroku and Docker a bit more. Also wrote some User stories/epics with the folks.
+
+## Week 3:
+
+Wrote up the docker-compose file based on some online tute I had found and tested to see we could atleast containerise the db and have an admin console into it.
+Wrote up the docker section of the proposal.
+
+## Week 4:
+
+Had some meetings with the team and general discussions around user stories/endpoint implementation details, also started looking into auth and peewee. 
+
+## Week 5:
+
+Auth is no joke and this week I worked on getting the auth endpoints completed. Register, login, logout to be specific. 
+
+## Week 6: 
+
+This week I am working on building comments up on both the backend and frontend. 
+
+## Week 7 
+
+I worked on FE and cooments backend and profile. Added a bulk assign function. 
+
+## Week 8 
+
+Still continuing with the comments FE. Updating Backend and adding dem replies, also working on porting to VM. 
+
+## Week 9 
+
+This week I continued working on the comments, and profile backends mainly fixing up issues. In addition I worked on testing our solution works 
+in the provided lubuntu vm. Essentially I created a bunch of VM's and replicated the install process each time as there were issues with packages required. One of the main challenges was ensuring our system worked as intended in the VM and was not blocked due to install issues. To do this I have written a test script setup.sh and added instructions on usage.
+
+## Week 10 
+
+Worked on fixing up the comments backend, and cleaning out any bugs in the setup script. Asked Lisa for help with the Frontend as she is very good at it.
+
